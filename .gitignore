@@ -1,0 +1,20 @@
+# data (raw + interim are re-creatable with `stormwater-intel fetch`)
+data/
+
+# python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+.pytest_cache/
+.ipynb_checkpoints/
+
+# local planning scratch (progress.md / PROGRESS.md IS committed)
+task_plan.md
+findings.md
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

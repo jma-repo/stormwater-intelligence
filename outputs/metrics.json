@@ -1,0 +1,591 @@
+{
+  "generated": "2026-11-13",
+  "config": {
+    "target_311_groups": [
+      "catch_basin",
+      "drainage"
+    ],
+    "universe_classes": [
+      "Residential",
+      "Industrial"
+    ],
+    "n_communities": 266,
+    "top_frac": 0.1,
+    "k_selected": 27,
+    "storm_trigger_mm": 10.0,
+    "storm_min_gauges": 2,
+    "window_days": 3,
+    "train_years": 4,
+    "primary_test_year": 2025,
+    "n_features": 46,
+    "xgb_params": {
+      "objective": "count:poisson",
+      "n_estimators": 300,
+      "learning_rate": 0.03,
+      "max_depth": 3,
+      "min_child_weight": 10,
+      "subsample": 0.8,
+      "colsample_bytree": 0.8,
+      "reg_lambda": 10.0,
+      "tree_method": "hist",
+      "random_state": 0,
+      "n_jobs": 4
+    }
+  },
+  "data": {
+    "n_events_total": 211,
+    "events_per_year": {
+      "2012": 15,
+      "2013": 13,
+      "2014": 21,
+      "2015": 15,
+      "2016": 19,
+      "2017": 7,
+      "2018": 10,
+      "2019": 19,
+      "2020": 16,
+      "2021": 9,
+      "2022": 16,
+      "2023": 14,
+      "2024": 12,
+      "2025": 12,
+      "2026": 13
+    },
+    "complaints_last_date": "2026-11-12",
+    "n_rain_gauges": 48
+  },
+  "primary_2025": [
+    {
+      "model": "random",
+      "capture": 0.1015,
+      "ci_lo": 0.1015,
+      "ci_hi": 0.1015,
+      "macro_capture": 0.1015,
+      "lift_vs_random": 1.0,
+      "n_events": 12,
+      "n_complaints": 1434
+    },
+    {
+      "model": "population",
+      "capture": 0.2929,
+      "ci_lo": 0.2421,
+      "ci_hi": 0.334,
+      "macro_capture": 0.2804,
+      "lift_vs_random": 2.8855,
+      "n_events": 12,
+      "n_complaints": 1434
+    },
+    {
+      "model": "rain_only",
+      "capture": 0.1702,
+      "ci_lo": 0.118,
+      "ci_hi": 0.2396,
+      "macro_capture": 0.1763,
+      "lift_vs_random": 1.6763,
+      "n_events": 12,
+      "n_complaints": 1434
+    },
+    {
+      "model": "history_365d",
+      "capture": 0.3072,
+      "ci_lo": 0.2475,
+      "ci_hi": 0.3543,
+      "macro_capture": 0.2847,
+      "lift_vs_random": 3.0265,
+      "n_events": 12,
+      "n_complaints": 1434
+    },
+    {
+      "model": "history_events",
+      "capture": 0.3162,
+      "ci_lo": 0.2492,
+      "ci_hi": 0.3662,
+      "macro_capture": 0.3032,
+      "lift_vs_random": 3.1156,
+      "n_events": 12,
+      "n_complaints": 1434
+    },
+    {
+      "model": "history_x_rain",
+      "capture": 0.3187,
+      "ci_lo": 0.253,
+      "ci_hi": 0.3694,
+      "macro_capture": 0.3175,
+      "lift_vs_random": 3.1397,
+      "n_events": 12,
+      "n_complaints": 1434
+    },
+    {
+      "model": "xgb",
+      "capture": 0.3466,
+      "ci_lo": 0.2706,
+      "ci_hi": 0.4039,
+      "macro_capture": 0.3345,
+      "lift_vs_random": 3.4145,
+      "n_events": 12,
+      "n_complaints": 1434
+    }
+  ],
+  "forward_2026": [
+    {
+      "model": "random",
+      "capture": 0.1015,
+      "ci_lo": 0.1015,
+      "ci_hi": 0.1015,
+      "macro_capture": 0.1015,
+      "lift_vs_random": 1.0,
+      "n_events": 13,
+      "n_complaints": 1195
+    },
+    {
+      "model": "population",
+      "capture": 0.3573,
+      "ci_lo": 0.2657,
+      "ci_hi": 0.4152,
+      "macro_capture": 0.2992,
+      "lift_vs_random": 3.5203,
+      "n_events": 13,
+      "n_complaints": 1195
+    },
+    {
+      "model": "rain_only",
+      "capture": 0.236,
+      "ci_lo": 0.1144,
+      "ci_hi": 0.3871,
+      "macro_capture": 0.226,
+      "lift_vs_random": 2.3249,
+      "n_events": 13,
+      "n_complaints": 1195
+    },
+    {
+      "model": "history_365d",
+      "capture": 0.3985,
+      "ci_lo": 0.3156,
+      "ci_hi": 0.457,
+      "macro_capture": 0.3444,
+      "lift_vs_random": 3.9259,
+      "n_events": 13,
+      "n_complaints": 1195
+    },
+    {
+      "model": "history_events",
+      "capture": 0.387,
+      "ci_lo": 0.281,
+      "ci_hi": 0.4452,
+      "macro_capture": 0.3064,
+      "lift_vs_random": 3.813,
+      "n_events": 13,
+      "n_complaints": 1195
+    },
+    {
+      "model": "history_x_rain",
+      "capture": 0.4126,
+      "ci_lo": 0.339,
+      "ci_hi": 0.4815,
+      "macro_capture": 0.3663,
+      "lift_vs_random": 4.0644,
+      "n_events": 13,
+      "n_complaints": 1195
+    },
+    {
+      "model": "xgb",
+      "capture": 0.4176,
+      "ci_lo": 0.3205,
+      "ci_hi": 0.4863,
+      "macro_capture": 0.3458,
+      "lift_vs_random": 4.1139,
+      "n_events": 13,
+      "n_complaints": 1195
+    }
+  ],
+  "walk_forward": [
+    {
+      "model": "random",
+      "capture": 0.1015,
+      "ci_lo": 0.1015,
+      "ci_hi": 0.1015,
+      "macro_capture": 0.1015,
+      "lift_vs_random": 1.0,
+      "n_events": 111,
+      "n_complaints": 8407
+    },
+    {
+      "model": "population",
+      "capture": 0.3209,
+      "ci_lo": 0.3009,
+      "ci_hi": 0.3381,
+      "macro_capture": 0.3,
+      "lift_vs_random": 3.1617,
+      "n_events": 111,
+      "n_complaints": 8407
+    },
+    {
+      "model": "rain_only",
+      "capture": 0.2086,
+      "ci_lo": 0.174,
+      "ci_hi": 0.2418,
+      "macro_capture": 0.204,
+      "lift_vs_random": 2.0554,
+      "n_events": 111,
+      "n_complaints": 8407
+    },
+    {
+      "model": "history_365d",
+      "capture": 0.312,
+      "ci_lo": 0.2914,
+      "ci_hi": 0.3316,
+      "macro_capture": 0.3015,
+      "lift_vs_random": 3.0738,
+      "n_events": 111,
+      "n_complaints": 8407
+    },
+    {
+      "model": "history_events",
+      "capture": 0.3382,
+      "ci_lo": 0.3143,
+      "ci_hi": 0.3584,
+      "macro_capture": 0.3081,
+      "lift_vs_random": 3.3322,
+      "n_events": 111,
+      "n_complaints": 8407
+    },
+    {
+      "model": "history_x_rain",
+      "capture": 0.3758,
+      "ci_lo": 0.3531,
+      "ci_hi": 0.3956,
+      "macro_capture": 0.3442,
+      "lift_vs_random": 3.7019,
+      "n_events": 111,
+      "n_complaints": 8407
+    },
+    {
+      "model": "xgb",
+      "capture": 0.3912,
+      "ci_lo": 0.3664,
+      "ci_hi": 0.4129,
+      "macro_capture": 0.3622,
+      "lift_vs_random": 3.8543,
+      "n_events": 111,
+      "n_complaints": 8407
+    }
+  ],
+  "paired_vs_baselines": {
+    "primary_2025": [
+      {
+        "baseline": "history_x_rain",
+        "diff_pts": 2.79,
+        "ci_lo_pts": 0.64,
+        "ci_hi_pts": 4.39
+      },
+      {
+        "baseline": "history_events",
+        "diff_pts": 3.03,
+        "ci_lo_pts": 0.24,
+        "ci_hi_pts": 5.75
+      },
+      {
+        "baseline": "population",
+        "diff_pts": 5.37,
+        "ci_lo_pts": 0.71,
+        "ci_hi_pts": 9.65
+      }
+    ],
+    "walk_forward": [
+      {
+        "baseline": "history_x_rain",
+        "diff_pts": 1.55,
+        "ci_lo_pts": 0.4,
+        "ci_hi_pts": 2.58
+      },
+      {
+        "baseline": "history_events",
+        "diff_pts": 5.3,
+        "ci_lo_pts": 3.48,
+        "ci_hi_pts": 7.25
+      },
+      {
+        "baseline": "population",
+        "diff_pts": 7.03,
+        "ci_lo_pts": 5.5,
+        "ci_hi_pts": 8.64
+      }
+    ]
+  },
+  "by_storm_severity_walk_forward": [
+    {
+      "tier": "peak < 20 mm",
+      "n_events": 35,
+      "n_complaints": 1166,
+      "random": 0.1015,
+      "history_events": 0.3006,
+      "history_x_rain": 0.325,
+      "xgb": 0.3388
+    },
+    {
+      "tier": "peak 20-30 mm",
+      "n_events": 40,
+      "n_complaints": 1977,
+      "random": 0.1015,
+      "history_events": 0.3123,
+      "history_x_rain": 0.3708,
+      "xgb": 0.3839
+    },
+    {
+      "tier": "peak > 30 mm",
+      "n_events": 36,
+      "n_complaints": 5264,
+      "random": 0.1015,
+      "history_events": 0.3563,
+      "history_x_rain": 0.3889,
+      "xgb": 0.4056
+    }
+  ],
+  "feature_ablation": [
+    {
+      "features": "rain + storm only",
+      "n_features": 12,
+      "walk_forward": 0.2074,
+      "y2025": 0.184
+    },
+    {
+      "features": "terrain only (30 m DEM)",
+      "n_features": 5,
+      "walk_forward": 0.3291,
+      "y2025": 0.3326
+    },
+    {
+      "features": "community static only",
+      "n_features": 13,
+      "walk_forward": 0.3541,
+      "y2025": 0.3417
+    },
+    {
+      "features": "history only",
+      "n_features": 16,
+      "walk_forward": 0.347,
+      "y2025": 0.3222
+    },
+    {
+      "features": "history + rain",
+      "n_features": 28,
+      "walk_forward": 0.39,
+      "y2025": 0.3473
+    },
+    {
+      "features": "history + rain + static",
+      "n_features": 41,
+      "walk_forward": 0.3882,
+      "y2025": 0.3501
+    },
+    {
+      "features": "all (incl. terrain)",
+      "n_features": 46,
+      "walk_forward": 0.3912,
+      "y2025": 0.3466
+    }
+  ],
+  "training_window_sensitivity": [
+    {
+      "train_years": 2,
+      "walk_forward": 0.3929,
+      "y2025": 0.3438
+    },
+    {
+      "train_years": 4,
+      "walk_forward": 0.3912,
+      "y2025": 0.3466
+    },
+    {
+      "train_years": 6,
+      "walk_forward": 0.3991,
+      "y2025": 0.355
+    },
+    {
+      "train_years": 8,
+      "walk_forward": 0.3956,
+      "y2025": 0.355
+    }
+  ],
+  "target_definition_sensitivity": [
+    {
+      "target": "catch basin only",
+      "n_complaints_wf": 8011,
+      "history_x_rain_wf": 0.3848,
+      "history_x_rain_2025": 0.3249,
+      "xgb_wf": 0.3967,
+      "xgb_2025": 0.3661
+    },
+    {
+      "target": "catch basin + drainage (primary)",
+      "n_complaints_wf": 8407,
+      "history_x_rain_wf": 0.3758,
+      "history_x_rain_2025": 0.3187,
+      "xgb_wf": 0.3912,
+      "xgb_2025": 0.3466
+    },
+    {
+      "target": "all rain-sensitive groups",
+      "n_complaints_wf": 10613,
+      "history_x_rain_wf": 0.3502,
+      "history_x_rain_2025": 0.3077,
+      "xgb_wf": 0.366,
+      "xgb_2025": 0.3366
+    }
+  ],
+  "largest_2025_event": {
+    "event_id": "2025-06-20",
+    "complaints": 287
+  },
+  "spatial_persistence": [
+    {
+      "year": 2019,
+      "spearman_prev_years_vs_year": 0.709,
+      "n_complaints": 953
+    },
+    {
+      "year": 2020,
+      "spearman_prev_years_vs_year": 0.712,
+      "n_complaints": 1271
+    },
+    {
+      "year": 2021,
+      "spearman_prev_years_vs_year": 0.655,
+      "n_complaints": 510
+    },
+    {
+      "year": 2022,
+      "spearman_prev_years_vs_year": 0.756,
+      "n_complaints": 1052
+    },
+    {
+      "year": 2023,
+      "spearman_prev_years_vs_year": 0.693,
+      "n_complaints": 974
+    },
+    {
+      "year": 2024,
+      "spearman_prev_years_vs_year": 0.784,
+      "n_complaints": 1018
+    },
+    {
+      "year": 2025,
+      "spearman_prev_years_vs_year": 0.729,
+      "n_complaints": 1434
+    },
+    {
+      "year": 2026,
+      "spearman_prev_years_vs_year": 0.731,
+      "n_complaints": 1195
+    }
+  ],
+  "gauge_data_quality": {
+    "tips_total": 571240,
+    "tips_over_cap": 89,
+    "cap_mm": 10.0,
+    "largest_tip_mm": 43.2
+  },
+  "eccc_crosscheck": {
+    "nearest_city_gauge": "Huntington Hills (ch 6)",
+    "distance_km": 3.9,
+    "overlap_days": 2185,
+    "pearson_r": 0.93,
+    "days_ge_10mm_eccc": 136,
+    "days_ge_10mm_city": 133
+  },
+  "category_rain_sensitivity": [
+    {
+      "group": "catch_basin",
+      "per_day_in_storm_window": 24.921,
+      "per_day_other_season_days": 4.755,
+      "ratio": 5.241
+    },
+    {
+      "group": "manhole",
+      "per_day_in_storm_window": 4.125,
+      "per_day_other_season_days": 2.285,
+      "ratio": 1.806
+    },
+    {
+      "group": "drainage_bylaw",
+      "per_day_in_storm_window": 2.724,
+      "per_day_other_season_days": 1.832,
+      "ratio": 1.487
+    },
+    {
+      "group": "erosion",
+      "per_day_in_storm_window": 2.724,
+      "per_day_other_season_days": 2.153,
+      "ratio": 1.265
+    },
+    {
+      "group": "drainage",
+      "per_day_in_storm_window": 2.644,
+      "per_day_other_season_days": 2.154,
+      "ratio": 1.227
+    },
+    {
+      "group": "storm_pond",
+      "per_day_in_storm_window": 0.856,
+      "per_day_other_season_days": 0.842,
+      "ratio": 1.016
+    },
+    {
+      "group": "sewer",
+      "per_day_in_storm_window": 11.894,
+      "per_day_other_season_days": 11.77,
+      "ratio": 1.011
+    }
+  ],
+  "lag_profile_catch_basin": [
+    {
+      "day_offset": -3,
+      "ratio_to_quiet_baseline": 3.408
+    },
+    {
+      "day_offset": -2,
+      "ratio_to_quiet_baseline": 3.058
+    },
+    {
+      "day_offset": -1,
+      "ratio_to_quiet_baseline": 1.59
+    },
+    {
+      "day_offset": 0,
+      "ratio_to_quiet_baseline": 7.253
+    },
+    {
+      "day_offset": 1,
+      "ratio_to_quiet_baseline": 6.587
+    },
+    {
+      "day_offset": 2,
+      "ratio_to_quiet_baseline": 3.836
+    },
+    {
+      "day_offset": 3,
+      "ratio_to_quiet_baseline": 2.674
+    },
+    {
+      "day_offset": 4,
+      "ratio_to_quiet_baseline": 2.914
+    },
+    {
+      "day_offset": 5,
+      "ratio_to_quiet_baseline": 2.744
+    },
+    {
+      "day_offset": 6,
+      "ratio_to_quiet_baseline": 2.974
+    },
+    {
+      "day_offset": 7,
+      "ratio_to_quiet_baseline": 2.82
+    },
+    {
+      "day_offset": 8,
+      "ratio_to_quiet_baseline": 4.091
+    }
+  ],
+  "gauge_spacing_km_median_nearest": 3.42
+}
